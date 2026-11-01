@@ -48,7 +48,7 @@ Sensors -> ESP32 -> Wi-Fi -> MQTT broker (HiveMQ) -> Node-RED -> Dashboard
 Use deep sleep (`esp_deep_sleep_start()`) and a longer publish interval to reduce energy use.
 
 ## Screenshots
-Add the circuit, Serial Monitor, HiveMQ data and dashboard screenshots here.
+![Circuit](IMG-20261101-WA0008.jpg)
 
 ## Author
 Uppara Sreenath
