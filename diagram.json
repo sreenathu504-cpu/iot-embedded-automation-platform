@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "author": "uppara sreenath",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht", "top": -90, "left": 160, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -90, "left": 280, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": 20, "left": 280, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot3", "top": 130, "left": 280, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay", "top": 240, "left": 160, "attrs": {} },
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": 250, "left": 40, "attrs": { "volume": "0.1" } }
+  ],
+  "connections": [
+    ["esp:D15", "dht:SDA", "green", []],
+    ["esp:3V3", "dht:VCC", "red", []],
+    ["esp:GND.1", "dht:GND", "black", []],
+
+    ["esp:D34", "pot1:SIG", "green", []],
+    ["esp:3V3", "pot1:VCC", "red", []],
+    ["esp:GND.1", "pot1:GND", "black", []],
+
+    ["esp:D35", "pot2:SIG", "green", []],
+    ["esp:3V3", "pot2:VCC", "red", []],
+    ["esp:GND.1", "pot2:GND", "black", []],
+
+    ["esp:D32", "pot3:SIG", "green", []],
+    ["esp:3V3", "pot3:VCC", "red", []],
+    ["esp:GND.1", "pot3:GND", "black", []],
+
+    ["esp:D26", "relay:IN", "orange", []],
+    ["esp:VIN", "relay:VCC", "red", []],
+    ["esp:GND.1", "relay:GND", "black", []],
+
+    ["esp:D27", "buzzer:2", "purple", []],
+    ["esp:GND.1", "buzzer:1", "black", []]
+  ],
+  "dependencies": {}
+}
